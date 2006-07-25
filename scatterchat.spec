@@ -4,7 +4,7 @@ Summary:	ScatterChat
 Summary(pl):	ScatterChat
 Name:		scatterchat
 Version:	1.0.1
-Release:	0.2
+Release:	0.3
 License:	GPLv2
 Group:		X11/Applications
 Source0:	http://www.rit.edu/~jst2912/%{name}-%{version}.tar.bz2
@@ -70,7 +70,7 @@ cd %{name}-module-%{_modver}
 %{__aclocal}
 %{__automake}
 %configure \
-	--with-shared
+	--with-executable
 %{__make}
 
 %install
@@ -86,12 +86,6 @@ cd %{name}-module-%{_modver}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%post	-p /sbin/ldconfig
-%postun	-p /sbin/ldconfig
-
-%post modules	-p /sbin/ldconfig
-%postun modules	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
@@ -119,4 +113,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files modules
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libscatterchat.so.1.0.2
+%attr(755,root,root) %{_bindir}/scatterchatmod
