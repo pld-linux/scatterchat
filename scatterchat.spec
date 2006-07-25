@@ -1,10 +1,12 @@
+%bcond_without	nas		# don't build NAS support
+%bcond_without	gtkspell	# don't build automatic spellchecking
 
 %define		_modver	1.02
 Summary:	ScatterChat
 Summary(pl):	ScatterChat
 Name:		scatterchat
 Version:	1.0.1
-Release:	0.3
+Release:	0.4
 License:	GPLv2
 Group:		X11/Applications
 Source0:	http://www.rit.edu/~jst2912/%{name}-%{version}.tar.bz2
@@ -15,7 +17,9 @@ URL:		http://www.scatterchat.com
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel
+%{?with_gtkspell:BuildRequires: gtkspell-devel}
 BuildRequires:	libgcrypt-devel
+%{?with_nas:BuildRequires: nas-devel}
 Requires:	scatterchat-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,14 +42,15 @@ pro-actively secure design.
 #%description -l pl
 
 %package modules
-Summary:	Scatterchat modules
-#Summary(pl):	-
-Group:		Libraries
+Summary:	Standalone scatterchat module
+Summary(pl):	Wolnostoj±cy modu³ scatterchat
+Group:		X11/Applications
 
 %description modules
-Scatterchat modules.
+Stanalone scatterchat module.
 
-#%description modules -l pl
+%description modules -l pl
+Wolnostoj±cy modu³ scatterchat.
 
 %package devel
 Summary:	Header files for scatterchat
@@ -63,7 +68,9 @@ Ten pakiet zawiera pliki nag³ówkowe biblioteki ....
 %setup -q -a1
 
 %build
-%configure
+%configure \
+	%{?with_nas:--enable-nas} \
+	%{!?with_gtkspell:--disable-gtkspell}
 %{__make}
 
 cd %{name}-module-%{_modver}
