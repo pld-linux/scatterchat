@@ -1,0 +1,21 @@
+--- scatterchat.desktop	2005-09-30 20:26:37.000000000 +0200
++++ scatterchat.desktop-new	2006-07-25 20:39:19.897772136 +0200
+@@ -1,11 +1,14 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+-Name=Scatter Chat Secure Instant Messenger
+-GenericName=Scatter Chat Secure Internet Messenger
+-Comment=Secure Multi-protocol Messaging Client
++Name=Scatter Chat
++Name[pl]=Scatter Chat
++GenericName=Scatter Chat
++GenericName[pl]=Scatter Chat
++Comment=Secure Internet Messenger
++Comment[pl]=Bezpieczny komunikator
+ Exec=scatterchat
+ Icon=gaim.png
+ Terminal=false
+ Type=Application
+-Categories=Application;Network;
++Categories=GTK;Qt;Network;InstantMessaging;
+ StartupNotify=true
