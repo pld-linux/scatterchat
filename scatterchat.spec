@@ -15,7 +15,6 @@ URL:		http://www.scatterchat.com
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel
-#BuildRequires:	intltool
 BuildRequires:	libgcrypt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
