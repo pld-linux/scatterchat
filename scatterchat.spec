@@ -6,7 +6,7 @@ Summary:	ScatterChat
 Summary(pl):	ScatterChat
 Name:		scatterchat
 Version:	1.0.1
-Release:	0.4
+Release:	0.5
 License:	GPLv2
 Group:		X11/Applications
 Source0:	http://www.rit.edu/~jst2912/%{name}-%{version}.tar.bz2
@@ -14,6 +14,7 @@ Source0:	http://www.rit.edu/~jst2912/%{name}-%{version}.tar.bz2
 Source1:	http://www.rit.edu/~jst2912/%{name}-module-%{_modver}.tar.bz2
 # Source1-md5:	a1ed47e51448527c52496fb7bc551c89
 URL:		http://www.scatterchat.com
+Patch0:		%{name}-desktop.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel
@@ -66,6 +67,7 @@ Ten pakiet zawiera pliki nag³ówkowe biblioteki ....
 
 %prep
 %setup -q -a1
+%patch0 -p0
 
 %build
 %configure \
@@ -87,6 +89,8 @@ install -d $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang --all-name
+
 cd %{name}-module-%{_modver}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -94,7 +98,7 @@ cd %{name}-module-%{_modver}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f scatterchat.lang
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog HACKING NEWS PROGRAMMING_NOTES README
 %attr(755,root,root) %{_bindir}/scatterchat
