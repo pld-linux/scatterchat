@@ -4,7 +4,7 @@ Summary:	ScatterChat
 Summary(pl):	ScatterChat
 Name:		scatterchat
 Version:	1.0.1
-Release:	0.1
+Release:	0.2
 License:	GPLv2
 Group:		X11/Applications
 Source0:	http://www.rit.edu/~jst2912/%{name}-%{version}.tar.bz2
@@ -16,6 +16,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel
 BuildRequires:	libgcrypt-devel
+Requires:	scatterchat-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
