@@ -108,7 +108,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/perl5/vendor_perl/5.8.0/i686-pld-linux-thread-multi/Gaim.pm
 %{_libdir}/perl5/vendor_perl/5.8.0/i686-pld-linux-thread-multi/auto/Gaim/.packlist
 %{_libdir}/perl5/vendor_perl/5.8.0/i686-pld-linux-thread-multi/auto/Gaim/*
-%{_pkgconfigdir}/gaim.pc
 %{_desktopdir}/scatterchat.desktop
 %{_mandir}/man1/*.1*
 %{_mandir}/man3/Gaim.3pm*
@@ -121,6 +120,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/blackchat-gaim/*.la
 %attr(755,root,root) %{_libdir}/*.la
 %{_includedir}/blackchat-gaim/*.h
+%{_pkgconfigdir}/gaim.pc
 
 %files modules
 %defattr(644,root,root,755)
