@@ -91,8 +91,8 @@ install -d $RPM_BUILD_ROOT
 
 %find_lang --all-name
 
-cd %{name}-module-%{_modver}
 %{__make} install \
+	-C %{name}-module-%{_modver} \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
@@ -103,11 +103,10 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog HACKING NEWS PROGRAMMING_NOTES README
 %attr(755,root,root) %{_bindir}/scatterchat
 %attr(755,root,root) %{_libdir}/blackchat-gaim/*.so
-%attr(755,root,root) %{_libdir}/libgaim-remote.so.0.0.0
-%{_libdir}/perl5/5.8.8/i686-pld-linux-thread-multi/perllocal.pod
-%{_libdir}/perl5/vendor_perl/5.8.0/i686-pld-linux-thread-multi/Gaim.pm
-%{_libdir}/perl5/vendor_perl/5.8.0/i686-pld-linux-thread-multi/auto/Gaim/.packlist
-%{_libdir}/perl5/vendor_perl/5.8.0/i686-pld-linux-thread-multi/auto/Gaim/*
+%attr(755,root,root) %{_libdir}/libgaim-remote.so.*.*.*
+%{perl_vendorarch}/Gaim.pm
+%dir %{perl_vendorarch}/auto/Gaim
+%{perl_vendorarch}/auto/Gaim/*
 %{_desktopdir}/scatterchat.desktop
 %{_mandir}/man1/*.1*
 %{_mandir}/man3/Gaim.3pm*
