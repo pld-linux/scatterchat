@@ -77,6 +77,7 @@ Ten pakiet zawiera pliki nag³ówkowe biblioteki ....
 
 cd %{name}-module-%{_modver}
 %{__aclocal}
+%{__autoconf}
 %{__automake}
 %configure \
 	--with-executable
@@ -89,7 +90,7 @@ install -d $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%find_lang --all-name
+%find_lang %{name} --all-name
 
 %{__make} install \
 	-C %{name}-module-%{_modver} \
