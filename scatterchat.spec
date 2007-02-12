@@ -5,7 +5,7 @@
 #
 %define		_modver	1.02
 Summary:	ScatterChat
-Summary(pl.UTF-8):   ScatterChat
+Summary(pl.UTF-8):	ScatterChat
 Name:		scatterchat
 Version:	1.0.1
 Release:	0.5
@@ -61,7 +61,7 @@ wszystko to wymuszone dzięki bezpiecznemu sposobowi zaprojektowania.
 
 %package modules
 Summary:	Standalone scatterchat module
-Summary(pl.UTF-8):   Wolnostojący moduł scatterchat
+Summary(pl.UTF-8):	Wolnostojący moduł scatterchat
 Group:		X11/Applications
 
 %description modules
@@ -72,7 +72,7 @@ Wolnostojący moduł scatterchat.
 
 %package devel
 Summary:	Header files for scatterchat
-Summary(pl.UTF-8):   Pliki nagłówkowe scatterchata
+Summary(pl.UTF-8):	Pliki nagłówkowe scatterchata
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
