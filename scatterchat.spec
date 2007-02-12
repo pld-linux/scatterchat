@@ -5,7 +5,7 @@
 #
 %define		_modver	1.02
 Summary:	ScatterChat
-Summary(pl):	ScatterChat
+Summary(pl.UTF-8):   ScatterChat
 Name:		scatterchat
 Version:	1.0.1
 Release:	0.5
@@ -42,45 +42,45 @@ through perfect forward secrecy, immunity from replay attacks, and
 limited resistance to traffic analysis... all reinforced through a
 pro-actively secure design.
 
-%description -l pl
-ScatterChat to BROÑ HAKTYWISTY zaprojektowana, aby pozwoliæ
-nietechnicznym aktywistom praw cz³owieka i dysydentom politycznym
-komunikowaæ siê bezpiecznie i anonimowo w czasie dzia³ania na
-wrogim terenie. Jest przydatna tak¿e w uk³adach korporacyjnych lub
-innych sytuacjach, kiedy po¿±dana jest prywatno¶æ.
+%description -l pl.UTF-8
+ScatterChat to BROÅƒ HAKTYWISTY zaprojektowana, aby pozwoliÄ‡
+nietechnicznym aktywistom praw czÅ‚owieka i dysydentom politycznym
+komunikowaÄ‡ siÄ™ bezpiecznie i anonimowo w czasie dziaÅ‚ania na
+wrogim terenie. Jest przydatna takÅ¼e w ukÅ‚adach korporacyjnych lub
+innych sytuacjach, kiedy poÅ¼Ä…dana jest prywatnoÅ›Ä‡.
 
 Jest to bezpieczny klient systemu komunikacji (oparty na programie
-Gaim) udostêpniaj±cy szyfrowanie miêdzy koñcami, zintegrowany routing
-"na cebulkê" przy u¿yciu Tora, bezpieczne przesy³anie plików i ³atw±
-do przeczytania instrukcjê.
+Gaim) udostÄ™pniajÄ…cy szyfrowanie miÄ™dzy koÅ„cami, zintegrowany routing
+"na cebulkÄ™" przy uÅ¼yciu Tora, bezpieczne przesyÅ‚anie plikÃ³w i Å‚atwÄ…
+do przeczytania instrukcjÄ™.
 
-Cechy zwi±zane z bezpieczeñstwem obejmuj± odporno¶æ na czê¶ciowe
-z³amanie poprzez ca³kowit± dyskrecjê przekazywania, odporno¶æ na
-ataki powtórzeniowe i ograniczon± odporno¶æ na analizê ruchu...
-wszystko to wymuszone dziêki bezpiecznemu sposobowi zaprojektowania.
+Cechy zwiÄ…zane z bezpieczeÅ„stwem obejmujÄ… odpornoÅ›Ä‡ na czÄ™Å›ciowe
+zÅ‚amanie poprzez caÅ‚kowitÄ… dyskrecjÄ™ przekazywania, odpornoÅ›Ä‡ na
+ataki powtÃ³rzeniowe i ograniczonÄ… odpornoÅ›Ä‡ na analizÄ™ ruchu...
+wszystko to wymuszone dziÄ™ki bezpiecznemu sposobowi zaprojektowania.
 
 %package modules
 Summary:	Standalone scatterchat module
-Summary(pl):	Wolnostoj±cy modu³ scatterchat
+Summary(pl.UTF-8):   WolnostojÄ…cy moduÅ‚ scatterchat
 Group:		X11/Applications
 
 %description modules
 Stanalone scatterchat module.
 
-%description modules -l pl
-Wolnostoj±cy modu³ scatterchat.
+%description modules -l pl.UTF-8
+WolnostojÄ…cy moduÅ‚ scatterchat.
 
 %package devel
 Summary:	Header files for scatterchat
-Summary(pl):	Pliki nag³ówkowe scatterchata
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe scatterchata
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 This is the package containing the header files for scatterchat.
 
-%description devel -l pl
-Ten pakiet zawiera pliki nag³ówkowe scatterchata.
+%description devel -l pl.UTF-8
+Ten pakiet zawiera pliki nagÅ‚Ã³wkowe scatterchata.
 
 %prep
 %setup -q -a1
